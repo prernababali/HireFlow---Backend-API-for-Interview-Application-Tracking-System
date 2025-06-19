@@ -84,7 +84,11 @@ src
 ## 🗄 Data Model (Simplified)
 
 User
- └─── has many ─── JobApplication
+
+ └─── has many
+ 
+           ─── JobApplication
+           
                         └─── has many ─── InterviewRound
 
 - User: username, email, password (hashed)
