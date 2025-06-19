@@ -12,7 +12,7 @@ Interview & Job-Application Tracking API
 * See a *dashboard* of totals, offer-rate & average time-to-offer  
 * Secure everything behind *JWT authentication*
 
-Built with  :- *Spring Boot 3, **MySQL, and **Spring Security*, HireFlow follows a clean three-layer architecture (controller → service → repository) and is ready for deployment on any JVM-capable host.
+Built with  :- *Spring Boot 3*, *MySQL*, and *Spring Security*, HireFlow follows a clean three-layer architecture (controller → service → repository) and is ready for deployment on any JVM-capable host.
 
 
 
@@ -21,18 +21,25 @@ Built with  :- *Spring Boot 3, **MySQL, and **Spring Security*, HireFlow follows
 | Category              | Details                                                                             |
 
 |-----------------------|-------------------------------------------------------------------------------------| 
-|
+
 | 🔐 Authentication    | Register / login with BCrypt password hashing and JWT bearer tokens                 |
+
 | 📋 Job Apps          | CRUD operations for job applications, tags, referrals, and status                   |
+
 | 🧪 Interview Rounds  | Multiple rounds per job: type, result, feedback, and date tracking                  |
+
 | 📊 Dashboard         | JSON analytics: total applied, offers, rejections, offer rate, average time-to-offer|
+
 | 🔎 Filtering         | Query jobs by status, company name, or application month                            |
+
 | 🧼 Error Handling    | Global handler returns clean JSON errors with timestamp and details                 |
+
 | ✅ Validation        | Field-level validation via annotations (e.g., non-blank, positive salary)           |
+
 | 🧪 Testing           | Unit + integration tests using JUnit 5 & Spring Boot Test                           |
+
 | 🐳 Docker-ready      | Comes with Dockerfile and docker-compose support                                    |
 
----
 
 ## Tech Stack
 
