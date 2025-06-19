@@ -18,27 +18,23 @@ Built with  :- *Spring Boot 3*, *MySQL*, and *Spring Security*, HireFlow follows
 
 ## Features
 
-| Category              | Details                                                                             |
+ Authentication-->Register / login with BCrypt password hashing and JWT bearer tokens                 
 
-|-----------------------|-------------------------------------------------------------------------------------| 
+ Job Apps-->CRUD operations for job applications, tags, referrals, and status                   
 
-| 🔐 Authentication    | Register / login with BCrypt password hashing and JWT bearer tokens                 |
+ Interview Rounds-->Multiple rounds per job: type, result, feedback, and date tracking                  
 
-| 📋 Job Apps          | CRUD operations for job applications, tags, referrals, and status                   |
+ Dashboard-->JSON analytics: total applied, offers, rejections, offer rate, average time-to-offer
 
-| 🧪 Interview Rounds  | Multiple rounds per job: type, result, feedback, and date tracking                  |
+ Filtering-->Query jobs by status, company name, or application month                            
 
-| 📊 Dashboard         | JSON analytics: total applied, offers, rejections, offer rate, average time-to-offer|
+ Error Handling-->Global handler returns clean JSON errors with timestamp and details                 
 
-| 🔎 Filtering         | Query jobs by status, company name, or application month                            |
+ Validation-->Field-level validation via annotations (e.g., non-blank, positive salary)           
 
-| 🧼 Error Handling    | Global handler returns clean JSON errors with timestamp and details                 |
+ Testing-->Unit + integration tests using JUnit 5 & Spring Boot Test                           
 
-| ✅ Validation        | Field-level validation via annotations (e.g., non-blank, positive salary)           |
 
-| 🧪 Testing           | Unit + integration tests using JUnit 5 & Spring Boot Test                           |
-
-| 🐳 Docker-ready      | Comes with Dockerfile and docker-compose support                                    |
 
 
 ## Tech Stack
@@ -60,27 +56,36 @@ Built with  :- *Spring Boot 3*, *MySQL*, and *Spring Security*, HireFlow follows
 
 
 src
+
  └─ main
+ 
      ├─ java/com/hireflow
+     
      │    ├─ config          # security config, JWT filters, password encoder
+     
      │    ├─ controller      # REST endpoints
+     
      │    ├─ dto             # request / response payloads
+     
      │    ├─ exception       # custom exceptions & handlers
+     
      │    ├─ model           # JPA entities
+     
      │    ├─ repository      # Spring Data interfaces
+     
      │    └─ service         # business logic layer
+     
      └─ resources
           ├─ application.yml # DB + JWT config
+          
           └─ db/migration    # SQL migrations (if Flyway used)
 
 
 ## 🗄 Data Model (Simplified)
 
-
 User
  └─── has many ─── JobApplication
                         └─── has many ─── InterviewRound
-
 
 - User: username, email, password (hashed)
 - JobApplication: company, role, salary, status, applied date
