@@ -19,7 +19,9 @@ Built with  :- *Spring Boot 3, **MySQL, and **Spring Security*, HireFlow follows
 ## Features
 
 | Category              | Details                                                                             |
-|-----------------------|-------------------------------------------------------------------------------------|                                                                                     |
+
+|-----------------------|-------------------------------------------------------------------------------------| 
+|
 | 🔐 Authentication    | Register / login with BCrypt password hashing and JWT bearer tokens                 |
 | 📋 Job Apps          | CRUD operations for job applications, tags, referrals, and status                   |
 | 🧪 Interview Rounds  | Multiple rounds per job: type, result, feedback, and date tracking                  |
